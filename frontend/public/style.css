@@ -1,0 +1,149 @@
+body{
+    margin: 0px;
+}
+/* header styles */
+header{
+    background-color: black;
+    color: goldenrod;
+    margin: 0px;
+    padding: 10px;
+}
+ul.nav{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.nav li.surface{
+    display: inline-block;
+    font-size:large;
+}
+.search{
+    width: max-content;
+    height: 2px;
+    position: relative;
+    top: 5px;
+    display: inline-flex;/* keeps it aligned */
+    align-items: center;
+    padding: 0px;
+    border-radius: 28px;
+}
+.search.placeholder{
+    color: goldenrod;
+}
+/* Dropdown menu */
+.content{
+    display: none;
+    list-style-type: none;
+    padding: 0px;
+    align-items: center;
+    position: absolute;
+    background-color: black;
+    height: 40%;
+    width: 20%;
+    font-size: large;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+.content a{
+    display: block;
+    text-decoration: underline;
+    padding: 5px;
+    color: goldenrod;
+}
+.surface:hover .content {
+    display: block;
+}
+/* Unspoken figure */
+.text{
+    background-color: grey;
+}
+.Unspoken div{
+    display: inline-block;
+    width: 20px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center; /* Align items vertically */
+    gap: 0px; /* Space between image and text */
+}
+.image {
+    max-width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+.text{
+    width: 100%; /* Make image fill its grid column */
+    height: auto; /* Maintain aspect ratio */
+    word-wrap: break-word; /* Break long words onto the next line */
+    white-space: normal; /* Allow the text to wrap naturally */
+}
+.text p{
+    font-size: small;
+    width: 100%;
+}
+/* Themes */
+ul.Themes{
+    list-style-type: none;
+}
+.Themes li div{
+    background-color: blue;
+    display: inline-flex;
+}
+/* Videos */
+.Themes li div video{
+    width: 200px;
+}
+/* media queries */
+
+/* phone and smaller */
+@media screen and (max-width: 657px){
+    .text{
+        font-size: 10px;
+        max-width: 250px;
+        height: auto;
+    }
+    .text p{
+        width: 100%;
+    }
+    .Unspoken div{
+        display: inline-block;
+        width: 5px;
+    }
+    .container{
+        display: block;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        align-items: center; /* Align items vertically */
+        gap: 0px; /* Space between image and text */
+    }
+    .image img{
+        max-width: 250px; /* Adjust the width as needed */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+/* laptop and further */
+@media screen and (min-width: 1280px){
+    .text{
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding: 36px 20px 20px 18px;
+        top: -5px
+    }
+    .text p{
+        width: 100%;
+        height: 100%;
+        font-size: x-large;
+    }
+    .Themes li div video{
+        width: 300px;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        align-items: center; /* Align items vertically */
+        gap: 2px; /* Space between image and text */
+    }
+    .image img{
+        width: 100%;
+    }
+}
